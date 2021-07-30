@@ -1,6 +1,9 @@
 setInterval(function () {
 	const d = new Date();
 
+	// The 180 is because 0 or 360 degrees is at 6 o'clock position
+	// and it needs to be 180 degrees above that position at 12 o'clock position
+
 	var seconds = d.getSeconds() * 6 + 180;
 	// six degrees of rotation for every 1 sec or minute
 	var minutes = d.getMinutes() * 6 + 180;
