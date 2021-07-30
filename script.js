@@ -3,8 +3,7 @@ setInterval(function () {
 	var seconds = d.getSeconds() * 6 + 180;
 	var minutes = d.getMinutes() * 6 + 180;
 	var hours = d.getHours() * 30 + 180;
-	var hourPartial = hours;
-	var minuteRatio = (d.getMinutes() / 60) * 30 + hours;
+	var hourPartial = (d.getMinutes() / 60) * 30 + hours;
 
 	console.log(
 		"Time: " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
@@ -17,5 +16,5 @@ setInterval(function () {
 		"rotate(" + minutes + "deg)";
 
 	document.getElementById("hour").style.transform =
-		"rotate(" + minuteRatio + "deg)";
+		"rotate(" + hourPartial + "deg)";
 }, 1000);
