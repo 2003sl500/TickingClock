@@ -1,19 +1,12 @@
-// function getSecondsSinceStartOfDay() {
-// 	return (
-// 		new Date().getSeconds() +
-// 		new Date().getMinutes() * 60 +
-// 		new Date().getHours() * 3600
-// 	);
-// }
-
 setInterval(function () {
 	const d = new Date();
 	var seconds = d.getSeconds() * 6 + 180;
 	var minutes = d.getMinutes() * 6 + 180;
 	var hours = d.getHours() * 30 + 180;
+	var hourPartial = hours / 8;
 
-	console.log(d.getMinutes());
-	// console.log(d.getSeconds());
+	console.log(hours);
+
 	document.getElementById("seconds").style.transform =
 		"rotate(" + seconds + "deg)";
 
@@ -21,5 +14,5 @@ setInterval(function () {
 		"rotate(" + minutes + "deg)";
 
 	document.getElementById("hour").style.transform =
-		"rotate(" + hours + "deg)";
+		"rotate(" + hourPartial + "deg)";
 }, 1000);
